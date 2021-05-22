@@ -1,9 +1,9 @@
 let bet = 5
 let H1 = 10
-let H2 = 68
-let H3 = 126
-let H4 = 184
-let H5 = 242
+let H2 = H1 + 58
+let H3 = H2 + 58
+let H4 = H3 + 58
+let H5 = H4 + 58
 let W1 = 10
 let W2 = 95
 let W3 = 110
