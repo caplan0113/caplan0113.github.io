@@ -1,10 +1,12 @@
-let hw = 80
+let hw = 50
 let bet = 5
-let H1 = 10
+let H0 = 10
+let H1 = 50
 let H2 = H1 + hw*1.16
 let H3 = H2 + hw*1.16
 let H4 = H3 + hw*1.16
 let H5 = H4 + hw*1.16
+let W0 = 10
 let W1 = 10
 let W2 = hw*1.9
 let W3 = hw*2.2
@@ -12,6 +14,9 @@ let W4 = hw*2.7
 let defcolor = "#ffffff"
 
 //line5
+let f1 = W0+hw+bet+hw*0.6
+let f5 = W1+(hw+bet)*6 + hw*0.4
+let f9 = W1+(hw+bet)*11
 let x1 = W1
 let x2 = W1 + hw + hw*0.7 + bet
 let x3 = x2 + hw + hw*0.2 + bet
@@ -24,7 +29,21 @@ let x9 = x8 + hw + hw*0.3 + bet
 let x10 = x9 + hw + hw*0.8 + bet
 
 var keymap = {
-  "Escape" : [ 0, 10000, 10000, 0, 0, 0],
+  //f0
+  "Escape" : [ "Esc", W0, H0, hw, hw*0.6666, defcolor],
+  "F1" : ["F1", f1, H0, hw, hw*0.666, defcolor],
+  "F2" : ["F2", f1+(hw+bet)*1, H0, hw, hw*0.666, defcolor],
+  "F3" : ["F3", f1+(hw+bet)*2, H0, hw, hw*0.666, defcolor],
+  "F4" : ["F4", f1+(hw+bet)*3, H0, hw, hw*0.666, defcolor],
+  "F5" : ["F5", f5, H0, hw, hw*0.666, defcolor],
+  "F6" : ["F6", f5+(hw+bet)*1, H0, hw, hw*0.666, defcolor],
+  "F7" : ["F7", f5+(hw+bet)*2, H0, hw, hw*0.666, defcolor],
+  "F8" : ["F8", f5+(hw+bet)*3, H0, hw, hw*0.666, defcolor],
+  "F9" : ["F9", f9, H0, hw, hw*0.666, defcolor],
+  "F10" : ["F10", f9+(hw+bet)*1, H0, hw, hw*0.666, defcolor],
+  "F11" : ["F11", f9+(hw+bet)*2, H0, hw, hw*0.666, defcolor],
+  "F12" : ["F12", f9+(hw+bet)*3, H0, hw, hw*0.666, defcolor],
+  //1
   "Backquote" : ["半角*", W1, H1, hw, hw, defcolor],
   "Digit1"  : ["1", W1+(hw+bet)*1, H1, hw, hw, defcolor],
   "Digit2"  : ["2", W1+(hw+bet)*2, H1, hw, hw, defcolor],

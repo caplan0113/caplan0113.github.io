@@ -50,7 +50,7 @@ function randomColor() {
 function down(e){
   e.preventDefault();
   console.log("down:"+e.code+"|"+e.key)
-  if(e.code=="Escape") window.location.reload();
+  if(e.shiftKey && e.code=="Escape") window.location.reload();
   keymap[e.code][5] = "#ff9933";
 }
 
