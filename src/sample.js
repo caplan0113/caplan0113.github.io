@@ -1,4 +1,5 @@
 let can = document.getElementById("cvs")
+let Text = document.getElementById("text")
 can.style.border = "1px solid";
 let ctx = can.getContext('2d')
 
@@ -50,7 +51,11 @@ function randomColor() {
 function down(e){
   e.preventDefault();
   console.log("down:"+e.code+"|"+e.key)
-  if(e.shiftKey && e.code=="Escape") window.location.reload();
+  if(e.ctrlKey && e.shiftKey && e.code=="F5") window.location.reload();
+  if(e.shiftKey && e.code=="Escape"){
+    keymap["Backquote"][5] = keymap["CapsLock"][5] = keymap["KanaMode"][5] = defcolor;
+  }
+  if(e.shiftKey && e.code=="KeyE") Text.remove();
   keymap[e.code][5] = "#ff9933";
 }
 
