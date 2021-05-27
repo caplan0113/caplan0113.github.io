@@ -27,10 +27,10 @@ let x7 = x6 + hw*3.5 + bet
 let x8 = x7 + hw + bet
 let x9 = x8 + hw + bet
 let x10 = x9 + hw + bet
-let x11 = x10 + hw + bet
-let x12 = x11 + hw + bet
-let x13 = x12 + hw*0.55 + bet
-let x14 = x13 + hw*0.55 + bet
+let x11 = x10 + hw + bet + bet
+let x12 = x11 + hw*0.9 + bet
+let x13 = x12 + hw*0.9 + bet
+
 
 var keymap = {
   //f0
@@ -118,11 +118,11 @@ var keymap = {
   "Convert"  :  ["変換", x7, H5, hw, hw, defcolor],
   "KanaMode"  : ["かな*", x8, H5, hw, hw, defcolor],
   "AltRight"   : ["Alt", x9, H5, hw, hw, defcolor],
-  "ContextMenu"   : ["", x10, H5, hw, hw, defcolor],
-  "ShiftRight"  : ["Ctrl", x11, H5, hw, hw, defcolor],
+//  "ContextMenu"   : ["", x10, H5, hw, hw, defcolor],
+  "ShiftRight"  : ["Ctrl", x10, H5, hw, hw, defcolor],
   //arrow
-  "ArrowUp"  : ["↑", x13, H5, hw*0.55, hw*0.45, defcolor],
-  "ArrowLeft"   : ["←", x12, H5+hw*0.55, hw*0.55, hw*0.45, defcolor],
-  "ArrowRight"   : ["→", x14, H5+hw*0.55, hw*0.55, hw*0.45, defcolor],
-  "ArrowDown"  : ["↓", x13, H5+hw*0.55, hw*0.55, hw*0.45, defcolor],
+  "ArrowUp"  : ["↑", x12, H5, hw*0.9, hw*0.45, defcolor],
+  "ArrowLeft"   : ["←", x11, H5+hw*0.55, hw*0.9, hw*0.45, defcolor],
+  "ArrowRight"   : ["→", x13, H5+hw*0.55, hw*0.9, hw*0.45, defcolor],
+  "ArrowDown"  : ["↓", x12, H5+hw*0.55, hw*0.9, hw*0.45, defcolor],
 }
